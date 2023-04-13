@@ -11,10 +11,9 @@ public class Finish : MonoBehaviour
     private AudioSource finishSoundEffect;
     private Animator anim;
     private Rigidbody2D rb;
-
     [SerializeField]private GameObject BananasScare;
     [SerializeField] private GameObject fade;
- private GameObject Player;
+    private GameObject Player;
 
     private float SecondsDelay = 1f;
     private bool NextLevel;
@@ -71,15 +70,15 @@ public class Finish : MonoBehaviour
 
     private void Star()
     {
-        if (((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) <= 0.33f)
+        if (((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) <= 0.33f && !PlayerPrefs.HasKey("stars" + SceneManager.GetActiveScene().buildIndex))
         {
             PlayerPrefs.SetInt("stars" + SceneManager.GetActiveScene().buildIndex, 1);
         }
-        else if (((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) > 0.33f && ((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) <= 0.99f)
+        else if (((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) > 0.33f && ((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) <= 0.99f && (!PlayerPrefs.HasKey("stars" + SceneManager.GetActiveScene().buildIndex) || PlayerPrefs.GetInt("stars" + SceneManager.GetActiveScene().buildIndex) < 2))
         {
             PlayerPrefs.SetInt("stars" + SceneManager.GetActiveScene().buildIndex, 2);
         }
-        else
+        else if (((double)PlayerPrefs.GetInt("coin" + SceneManager.GetActiveScene()) / (double)allCoins) > 0.99f && (!PlayerPrefs.HasKey("stars" + SceneManager.GetActiveScene().buildIndex) || PlayerPrefs.GetInt("stars" + SceneManager.GetActiveScene().buildIndex) < 3))
         {
             PlayerPrefs.SetInt("stars" + SceneManager.GetActiveScene().buildIndex, 3);
         }

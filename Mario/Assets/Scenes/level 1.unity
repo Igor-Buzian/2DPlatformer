@@ -30168,7 +30168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862722749776201822, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
       propertyPath: wallLayerMask.m_Bits
-      value: 256
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2862722749776202658, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
       propertyPath: m_RootOrder
@@ -32273,7 +32273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2862722749776202658, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.19
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 2862722749776202658, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
       propertyPath: m_LocalPosition.y

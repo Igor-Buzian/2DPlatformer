@@ -1,17 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class CharacterSkin : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public List<Sprite> skins = new List<Sprite>();
     [SerializeField] private Text characterName;
-    
+
     public int selectedSkin;
+
+    private void Start()
+    {
+         selectedSkin = PlayerPrefs.GetInt("selectedSkin");
+         spriteRenderer.sprite = skins[selectedSkin];
+    }
+
     public void NextOption()
     {
         selectedSkin = selectedSkin + 1;
@@ -20,7 +24,6 @@ public class CharacterSkin : MonoBehaviour
             selectedSkin = 0;
         }
         spriteRenderer.sprite = skins[selectedSkin];
-        PlayerPrefs.SetInt("selectedSkin", selectedSkin);
         if (selectedSkin == 0) {
             characterName.text = "Cute Frog";
         }
@@ -42,7 +45,6 @@ public class CharacterSkin : MonoBehaviour
             selectedSkin = skins.Count-1;
         }
         spriteRenderer.sprite = skins[selectedSkin];
-        PlayerPrefs.SetInt("selectedSkin", selectedSkin);
         if (selectedSkin == skins.Count)
         {
             selectedSkin = 0;
@@ -60,6 +62,12 @@ public class CharacterSkin : MonoBehaviour
         {
             characterName.text = "Pink Guy";
         }
+    }
+
+    public void ReturnButton()
+    {
+        PlayerPrefs.SetInt("selectedSkin", selectedSkin);
+        Debug.Log(PlayerPrefs.GetInt("selectedSkin"));
     }
 
 }
