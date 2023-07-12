@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ChooseMenu.unity
-    guid: 568de731e8f01cb4ba28decabe345d57
+    path: Assets/Scenes/StartScene.unity
+    guid: 34c1e3b619bd0e5428053d0422aa40d4
   - enabled: 1
     path: Assets/Scenes/level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -16,12 +16,16 @@ EditorBuildSettings:
     guid: 4f5229c19b38b5d4487907aa7036b97a
   - enabled: 1
     path: Assets/Scenes/level 3.unity
+    guid: 2a96c6e6ceff47b40b180fa086d30610
+  - enabled: 1
+    path: Assets/Scenes/level 4.unity
+    guid: 59e94e446f8186c4f9ddd0e40335f650
+  - enabled: 1
+    path: Assets/Scenes/level 5.unity
     guid: 94eafd40b64cdb547bd7d30a16f1e26e
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: 6622a8a45d1dbef4cb324abadebd9b0e
-  - enabled: 1
-    path: Assets/Scenes/StartScene.unity
-    guid: 34c1e3b619bd0e5428053d0422aa40d4
+    path: Assets/Scenes/ChooseMenu.unity
+    guid: 568de731e8f01cb4ba28decabe345d57
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6b35b97a0ed6d6e4f985fccca1495ca2, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8c6b86e70bedba64697b6f9679af81dc, type: 2}

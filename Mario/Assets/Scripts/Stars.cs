@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.TextCore.Text;
-using Unity.VisualScripting;
 
 public class Stars : MonoBehaviour
 {
@@ -12,7 +8,7 @@ public class Stars : MonoBehaviour
     public Button[] lvls;
     public Sprite star, NoStar;
 
-    public int level = 1;
+     int level = 1;
 
     public void Start()
     {
@@ -67,5 +63,13 @@ public class Stars : MonoBehaviour
     public void goToTheThirdLvl()
     {
         SceneManager.LoadScene(3);
+    }
+    public void goToTheFourLvl()
+    {
+        SceneManager.LoadScene(4);
+    }
+    public void goToTheFiveLvl()
+    {
+        SceneManager.LoadScene(5);
     }
 }

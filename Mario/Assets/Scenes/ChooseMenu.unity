@@ -3471,9 +3471,10 @@ MonoBehaviour:
   - {fileID: 916470768}
   - {fileID: 644641812}
   - {fileID: 921729226}
+  - {fileID: 816835459}
+  - {fileID: 1563458992}
   star: {fileID: 21300000, guid: 1e5be008ad5b8f94594979e032daee1d, type: 3}
   NoStar: {fileID: 21300000, guid: a0d2685c45c6a7343a9b8c236b3e77b4, type: 3}
-  level: 1
 --- !u!114 &597370513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,9 +4543,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 597370512}
         m_TargetAssemblyTypeName: Stars, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: goToTheFourLvl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7846,9 +7847,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 597370512}
         m_TargetAssemblyTypeName: Stars, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: goToTheFiveLvl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

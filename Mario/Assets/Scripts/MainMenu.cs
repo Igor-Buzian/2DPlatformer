@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("ChooseMenu");
     }
     public void GoToSettingMenu()
     {

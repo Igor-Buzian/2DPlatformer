@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 2862722749776201822}
   - component: {fileID: 2862722749776201817}
   - component: {fileID: 2862722749776201816}
-  - component: {fileID: 2862722749776201819}
   - component: {fileID: 2862722749776201818}
   - component: {fileID: 2862722749776201813}
   - component: {fileID: 2862722749776201812}
   - component: {fileID: 2862722749776201815}
+  - component: {fileID: 5334757147852842648}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,12 +153,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54104f31257b5e74d87893f8342f1ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fontCheck: {fileID: 0}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 64
+  jumpSoundEffect: {fileID: 2862722749776201813}
   movespeed: 7
   jumpForce: 12
-  jumpSoundEffect: {fileID: 2862722749776201813}
+  wallSlideSpeed: 0.5
+  wallDistance: 0.7
+  wallLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &2862722749776201817
 Animator:
   serializedVersion: 4
@@ -198,20 +204,6 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!114 &2862722749776201819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862722749776201814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41436f5a7cb0b5429f542d6189a71bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BananasScare: {fileID: 0}
-  BananasSoundEffect: {fileID: 2862722749776201812}
 --- !u!114 &2862722749776201818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,3 +505,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5334757147852842648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2862722749776201814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41436f5a7cb0b5429f542d6189a71bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bananas: 0
+  BananasScare: {fileID: 0}
+  BananasSoundEffect: {fileID: 0}

@@ -30214,8 +30214,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5334757147852842648, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+      propertyPath: BananasScare
+      value: 
+      objectReference: {fileID: 265589277}
+    - target: {fileID: 5334757147852842648, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+      propertyPath: BananasSoundEffect
+      value: 
+      objectReference: {fileID: 329135326}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+--- !u!82 &329135326 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2862722749776201812, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+  m_PrefabInstance: {fileID: 329135325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &339264471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1057244427762485350, guid: 081b4367fe1527d43b23f335d656148a, type: 3}
@@ -32222,7 +32235,7 @@ PrefabInstance:
     - target: {fileID: 2862722749776201817, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: c9ec7fbfe2f4701448d3e4f0bf4f378d, type: 2}
+      objectReference: {fileID: 9100000, guid: 6d34c81e21ff904479e9bdc0e0824188, type: 2}
     - target: {fileID: 2862722749776201819, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
       propertyPath: BananasScare
       value: 
@@ -32311,8 +32324,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5334757147852842648, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+      propertyPath: BananasScare
+      value: 
+      objectReference: {fileID: 265589277}
+    - target: {fileID: 5334757147852842648, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+      propertyPath: BananasSoundEffect
+      value: 
+      objectReference: {fileID: 1353881041}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+--- !u!82 &1353881041 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2862722749776201812, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+  m_PrefabInstance: {fileID: 1353881040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1356668325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36701,8 +36727,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5334757147852842648, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+      propertyPath: BananasScare
+      value: 
+      objectReference: {fileID: 265589277}
+    - target: {fileID: 5334757147852842648, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+      propertyPath: BananasSoundEffect
+      value: 
+      objectReference: {fileID: 1987628159}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+--- !u!82 &1987628159 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2862722749776201812, guid: b2f38a9abd13df14c80aba6af9858a52, type: 3}
+  m_PrefabInstance: {fileID: 1987628158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2002666677
 PrefabInstance:
   m_ObjectHideFlags: 0

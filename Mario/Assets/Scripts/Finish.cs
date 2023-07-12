@@ -1,22 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
-using UnityEngine.UI;
+
 
 public class Finish : MonoBehaviour
 {
     private AudioSource finishSoundEffect;
     private Animator anim;
-    private Rigidbody2D rb;
     [SerializeField]private GameObject BananasScare;
     [SerializeField] private GameObject fade;
-    private GameObject Player;
 
     private float SecondsDelay = 1f;
-    private bool NextLevel;
     int allCoins;
     int level;
     private void Start()
@@ -24,21 +17,17 @@ public class Finish : MonoBehaviour
         finishSoundEffect = GetComponent<AudioSource>();
         anim = fade.GetComponent<Animator>();
         allCoins = GameObject.FindGameObjectsWithTag("Banana").Length;
-        level = PlayerPrefs.GetInt("level");
         finishSoundEffect.volume = PlayerPrefs.GetFloat("SoundOfCharacter");
-        /*        if (GameObject.Find("Player1").SetActive(true) || GameObject.Find("Player2").SetActive(false);)
-                {
-                    GameObject.Find("Player1").SetActive(true);
-                    rb = GameObject.Find("Player1").GetComponent<Rigidbody2D>();
-                }
-                else if(GameObject.Find("Player2").GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Dynamic)
-                {
-                    rb = GameObject.Find("Player2").GetComponent<Rigidbody2D>();
-                }
-                else if(GameObject.Find("Player3").GetComponent<Rigidbody2D>().bodyType == RigidbodyType2D.Dynamic)
-                { 
-                    rb = GameObject.Find("Player3").GetComponent<Rigidbody2D>(); 
-                }*/
+        if (PlayerPrefs.HasKey("level"))
+        {
+            level = PlayerPrefs.GetInt("level");
+        }
+        else
+        {
+            level = 1;
+            PlayerPrefs.SetInt("level", level);
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -46,7 +35,6 @@ public class Finish : MonoBehaviour
         {        
             finishSoundEffect.Play();
             Star();
-            Invoke("StaticBody", 0.5f);
             anim.SetTrigger("Fade");
             Invoke("CompleteLevel", SecondsDelay);
         }
@@ -54,7 +42,6 @@ public class Finish : MonoBehaviour
         {
             finishSoundEffect.Play();
             Star();
-            Invoke("StaticBody", 0.5f);
             anim.SetTrigger("Fade");
             Invoke("CompleteLevel", SecondsDelay);
         }
@@ -62,7 +49,6 @@ public class Finish : MonoBehaviour
         {
             finishSoundEffect.Play();
             Star();
-            Invoke("StaticBody", 0.5f);
             anim.SetTrigger("Fade");
             Invoke("CompleteLevel", SecondsDelay);
         }
@@ -100,8 +86,4 @@ public class Finish : MonoBehaviour
             }
         }
     }
-/*    private void StaticBody()
-    {
-        rb.bodyType = RigidbodyType2D.Static;
-    }*/
 }
